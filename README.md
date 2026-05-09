@@ -1,3 +1,9 @@
+echo "# IMY210 Implementing a Blog Assignment" > README.md
+
+echo "## Student: Taletso Pabale (u25163885)" >> README.md
+
+echo "## Using these technologies: Nuxt.js, Strapi, Docker" >> README.md
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
