@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Snippet": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "tutorial",
+        "assignment-help",
+        "study-tips",
+        "coding",
+        "year-1",
+        "year-2",
+        "year-3",
+        "final-year"
+      ]
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
