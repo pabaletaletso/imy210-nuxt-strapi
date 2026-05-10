@@ -1,28 +1,51 @@
 # IMY210 Assignment - Part 6: Reflection
 
-**Student Name:** Taletso Pabale
-**Student Number:** u25163885
+**Student Name:** Taletso Pabale  
+**Student Number:** u25163885  
 **GitHub Repository:** https://github.com/pabaletaletso/imy210-nuxt-strapi
 
-## Reflection (198 words)
+## Reflection
 
-This assignment has taught me about building websites with a backend and frontend using Docker.
+This assignment taught me a lot about building a full-stack website using both frontend and backend technologies with Docker. It gave me practical experience working with tools that are used in real-world development.
 
-### Challenges I Faced
+The biggest challenge I faced was learning how to use Strapi. It was completely new software for me, so I struggled at first with creating content types, creating blog posts, publishing posts, and understanding how the API works. It took time to understand the CMS structure, but after experimenting and reading through the documentation, I was able to create and manage my content successfully.
 
-The biggest challenge was learning to use Strapi. I never used it before. I struggled with creating content types and publishing posts. But after spending time trying things out, I was able to figure it out.
+Docker was also difficult. Writing Dockerfiles for both Nuxt and Strapi was challenging because my frontend was not communicating with my backend correctly at first. Another issue I faced was that the Strapi admin panel would keep loading and reloading without opening properly after every build. This happened because my Docker setup and container configuration were not correct. After debugging and fixing my Docker Compose setup, everything started working properly.
 
-Docker was also very hard. I had to write Dockerfiles for both Nuxt and Strapi. My frontend could not communicating with my backend at first. The Strapi admin panel would not open and kept reloading. This happened because my containers were not set up correctly.
+This assignment taught me how important environment setup is in development. I learned how frontend and backend services communicate inside Docker containers and how CMS applications like Strapi make content management easier. Even though this assignment was challenging, it helped me understand backend and frontend integration better and improved my problem-solving skills.
 
-### What I Learned
+---
 
-This assignment has taught me how important environment setup is. I now understand how frontend and backend talk to each other using Docker.
+## Commands Used
 
-I also learned how to use a CMS like Strapi. It makes managing content much easier. Even though this assignment was hard, I learned a lot.
-
-## Commands to Run
-
+### Clone project
 ```bash
 git clone https://github.com/pabaletaletso/imy210-nuxt-strapi.git
 cd imy210-nuxt-strapi
-docker-compose up --build
+
+# Navigate to project folder
+cd #To file directory
+
+# Stop and remove containers and volumes
+docker compose down --volumes
+
+# Rebuild containers without cache
+docker compose build --no-cache
+
+# Start containers
+docker compose up
+
+# Build and start containers together
+docker compose up --build
+
+# View running containers
+docker ps
+
+# Stop running containers
+docker compose down
+
+# Open Strapi admin panel
+http://localhost:1337/admin
+
+# Open Nuxt frontend
+http://localhost:3000
